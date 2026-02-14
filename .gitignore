@@ -1,0 +1,38 @@
+# MacOS specific files/folders
+.DS_Store
+
+# Node.js specific file/folders
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build Results
+bin/
+obj/
+publish/
+
+# User specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code Settings
+.vscode/
+
+# Visual Studio Settings
+*.vspscc
+*.vssscc
+.vs/
+
+# Logs
+*.log
+
+# Environment Files
+.env
+
+# Backup & temp files
+*.bak
+*.tmp
+*.swp

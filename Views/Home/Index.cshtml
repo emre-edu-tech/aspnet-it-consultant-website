@@ -1,0 +1,282 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+    <!-- Hero Section -->
+    <header class="bg-indigo-50 py-24">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center px-4">
+            <!-- Hero Content -->
+            <div class="hero-content-wrapper">
+                <h1 class="text-4xl font-extrabold text-indigo-900 mb-4">
+                    Practical IT Consulting for Growing Businesses
+                </h1>
+                <p class="text-lg text-gray-700 mb-8">
+                    I help companies simplify technology, reduce risks, and build scalable IT systems that support real business growth.
+                </p>
+                <div class="flex gap-4">
+                    <a asp-controller="Home" asp-action="Contact" class="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700">
+                        Book a Consultation
+                    </a>
+                    <a asp-controller="Home" asp-action="Services" class="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-100">View Services</a>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="image-wrapper">
+                <img src="/images/hero-image.webp" alt="IT Consulting Home" class="rounded-xl shadow-lg w-full">
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Who I help section -->
+    <section class="who-ihelp py-20">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-indigo-900 mb-6">
+                Who I Help
+            </h2>
+            <p class="text-gray-700 mb-12 max-w-3xl mx-auto">
+                I work with businesses that rely on technology but don't want unnecessary complexity, hidden risks, or unclear IT decisions.
+            </p>
+            
+            <!-- Business Types Grid -->
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+
+                <!-- Business Type -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-semibold text-lg mb-2">Small & Medium Businesses</h3>
+                    <p class="text-gray-600">
+                        Looking for reliable IT systems without hiring an in-house IT team.
+                    </p>
+                </div>
+
+                <!-- Business Type -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-semibold text-lg mb-2">Startups & Scale-ups</h3>
+                    <p class="text-gray-600">
+                        Needing scalable, secure infrastructure that grows with the business.                    
+                    </p>
+                </div>
+
+                <!-- Business Type -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-semibold text-lg mb-2">Digital-First Teams</h3>
+                    <p class="text-gray-600">
+                        Wanting better integrations, automation, and operational efficiency.                    
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="bg-gray-50 py-20">
+        <!-- Section Wrapper -->
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-indigo-900 mb-4">
+                    What I Do
+                </h2>
+                <p class="text-gray-700">
+                    Focused consulting services designed to solve real IT problems.
+                </p>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+
+                    <!-- Icon Wrapper -->
+                    <div class="mb-4 flex justify-center">
+                        <!-- Service Icon -->
+                        <div class="icon w-12 h-12 bg-indigo-100 rounded-xl p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                            </svg>
+                        </div> <!-- End Service Icon -->
+                    </div> <!-- End Icon Wrapper -->
+
+                    <!-- Service Title -->
+                    <h3 class="text-xl font-semibold mb-2 text-center">IT Strategy & Roadmapping</h3>
+
+                    <!-- Service Description -->
+                    <p class="text-gray-600">Develop future-proof IT strategies & align technology with business goals.</p>
+                </div>
+    
+                <!-- Service Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <!-- Service Icon Wrapper -->
+                    <div class="mb-4 flex justify-center">
+                        <!-- Service Icon -->
+                        <div class="icon w-12 h-12 bg-indigo-100 rounded-xl p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5H18V15H4.5v-4.5ZM3.75 18h15A2.25 2.25 0 0 0 21 15.75v-6a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 1.5 9.75v6A2.25 2.25 0 0 0 3.75 18Z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Service Title -->
+                    <h3 class="text-xl font-semibold mb-2 text-center">System Integration</h3>
+
+                    <!-- Service Description -->
+                    <p class="text-gray-600">
+                        Connecting tools, platforms, and workflows into a reliable ecosystem.
+                    </p>
+                </div>
+    
+                <!-- Service Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <!-- Service Icon Wrapper -->
+                    <div class="mb-4 flex justify-center">
+                        <!-- Service Icon -->
+                        <div class="icon w-12 h-12 bg-indigo-100 rounded-xl p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Service Title -->
+                    <h3 class="text-xl font-semibold mb-2 text-center">Security & Risk Advisory</h3>
+
+                    <!-- Service Description -->
+                    <p class="text-gray-600">Identifying risks early and applying practical security best practices.
+                    </p>
+                </div>
+            </div> <!-- End Services Grid -->
+
+            <div class="text-center mt-10">
+                <a asp-controller="Home" asp-action="Services" class="text-indigo-600 font-semibold flex items-center gap-2 justify-center">
+                    <span>View all services</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section> <!-- End Services Preview -->
+
+    <!-- How I Work -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto pxx-4">
+            <h2 class="text-3xl font-bold text-indigo-900 text-center mb-12">
+                How I Work
+            </h2>
+
+            <!-- How I Work Steps -->
+            <div class="grid md:grid-cols-4 gap-6 text-center">
+
+                <!-- Step 1 -->
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+                    <!-- Step Icon Wrapper -->
+                    <div class="mb-4 flex justify-center">
+                        <!-- Step Icon -->
+                        <div class="icon w-12 h-12 bg-indigo-100 rounded-lg p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+                            </svg>
+
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">
+                        1. Understand
+                    </h3>
+                    <p class="text-gray-600">
+                        I analyze your business, goals, and current IT setup.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+                    <!-- Step Icon Wrapper -->
+                    <div class="mb-4 flex justify-center">
+                        <!-- Step Icon -->
+                        <div class="icon w-12 h-12 bg-indigo-100 rounded-lg p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">
+                        2. Plan
+                    </h3>
+                    <p class="text-gray-600">
+                        You get a clear, realistic strategy or recommendation.                    
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+
+                    <!-- Step Icon Wrapper -->
+                    <div class="mb-4 flex justify-center">
+                        <!-- Step Icon -->
+                        <div class="icon w-12 h-12 bg-indigo-100 rounded-lg p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                            </svg>
+                        </div> <!-- End Step Icon -->
+                    </div> <!-- End Step Icon Wrapper -->
+
+                    <!-- Step Title -->
+                    <h3 class="font-semibold text-lg mb-2">
+                        3. Execute
+                    </h3>
+
+                    <!-- Step Description -->
+                    <p class="text-gray-600">
+                        I implement solutions with precision.
+                    </p>
+
+                </div>
+
+                <!-- Step 4 -->
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+
+                    <!-- Step Icon Wrapper -->
+                    <div class="mb-4 flex justify-center">
+                        <!-- Step Icon -->
+                        <div class="icon w-12 h-12 bg-indigo-100 rounded-lg p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5H18V15H4.5v-4.5ZM3.75 18h15A2.25 2.25 0 0 0 21 15.75v-6a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 1.5 9.75v6A2.25 2.25 0 0 0 3.75 18Z" />
+                            </svg>
+
+                        </div> <!-- End Step Icon -->
+                    </div> <!-- End Step Icon Wrapper -->
+
+                    <!-- Step Title -->
+                    <h3 class="font-semibold text-lg mb-2">
+                        4. Support
+                    </h3>
+
+                    <!-- Step Description -->
+                    <p class="text-gray-600">
+                        I ensure long-term stability and growth.
+                    </p>
+
+                </div>
+            </div> <!-- End How I Work Steps -->
+        </div>
+    </section> <!-- End How I Work -->
+
+    <!-- Trust + CTA -->
+    <section class="bg-indigo-600 py-20">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold text-white mb-6">
+                Need Clear, Reliable IT Guidance?
+            </h2>
+            <p class="text-indigo-100 mb-8">
+                Let's discuss your challenges and see how I can help.            
+            </p>
+            <a asp-controller="Home" asp-action="Contact" class="inline-block px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg shadow hover:bg-gray-100">Get in Touch</a>
+        </div>
+    </section> <!-- End Trust + CTA -->
