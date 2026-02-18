@@ -36,3 +36,6 @@ publish/
 *.bak
 *.tmp
 *.swp
+
+# Deploy Script
+deploy.ps1
