@@ -31,6 +31,8 @@ publish/
 
 # Environment Files
 .env
+appsettings.Development.json
+appsettings.Production.json
 
 # Backup & temp files
 *.bak

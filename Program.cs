@@ -2,6 +2,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.Configure<ITCOnsultantWebsite.Models.MailSettings>(
+    builder.Configuration.GetSection("MailSettings")
+);
 
 var app = builder.Build();
 
