@@ -2,6 +2,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Adding Mailsettings configuration to the application
 builder.Services.Configure<ITCOnsultantWebsite.Models.MailSettings>(
     builder.Configuration.GetSection("MailSettings")
 );
