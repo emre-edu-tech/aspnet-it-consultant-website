@@ -9,10 +9,12 @@ namespace ITCOnsultantWebsite.Controllers
     public class ContactController : Controller
     {
         private readonly MailSettings _mailSettings;
+        private readonly SiteSettings _siteSettings;
 
-        public ContactController(IOptions<MailSettings> mailSettings)
+        public ContactController(IOptions<MailSettings> mailSettings, IOptions<SiteSettings> siteSettings)
         {
             _mailSettings = mailSettings.Value;
+            _siteSettings = siteSettings.Value;
         }
 
         [HttpPost]
@@ -29,6 +31,22 @@ namespace ITCOnsultantWebsite.Controllers
             // Try to send the mail if sending is not successfull then catch the exception and show it to the user by using TempData array.
             try
             {
+                // ContactFormModel model includes the field values coming from Contact Form
+                // Prepare Email Subject
+                var subject = $"[{_siteSettings.Name}] New Contact Form Submission from {model.Name}";
+
+                // Prepare E-mail Message
+                var mailMessage = new MailMessage
+                {
+                    From = new MailAddress(_mailSettings.SenderEmail),
+                    Subject = subject,
+                    Body = $"Name: {model.Name}\nEmail: {model.Email}\nMessage: {model.Message}",
+                    IsBodyHtml = false
+                };
+
+                // Add receiving email
+                mailMessage.To.Add(_mailSettings.ReceiverEmail);
+
                 // Enter Host, Port, Username, Password, Enable SSL information
                 var smtpClient = new SmtpClient(_mailSettings.Server, _mailSettings.Port)
                 {
@@ -36,17 +54,6 @@ namespace ITCOnsultantWebsite.Controllers
                     EnableSsl = true
                 };
 
-                // Prepare E-mail Message
-                var mailMessage = new MailMessage
-                {
-                    From = new MailAddress(_mailSettings.SenderEmail),
-                    Subject = $"New Contact Form Submission from {model.Message}",
-                    Body = $"Name: {model.Name}\nEmail: {model.Email}\nMessage: {model.Message}",
-                    IsBodyHtml = false
-                };
-
-                // Add receiving email
-                mailMessage.To.Add(_mailSettings.ReceiverEmail);
                 // Send Mail Message
                 smtpClient.Send(mailMessage);
                 // Add success message to the Temprary Data

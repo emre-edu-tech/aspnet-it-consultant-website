@@ -3,9 +3,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Adding Mailsettings configuration to the application
+// Add MailSettings configuration to the application so it can be injected 
 builder.Services.Configure<ITCOnsultantWebsite.Models.MailSettings>(
     builder.Configuration.GetSection("MailSettings")
+);
+
+// Add SiteSettings configuration to the application so it can be injected
+builder.Services.Configure<ITCOnsultantWebsite.Models.SiteSettings>(
+    builder.Configuration.GetSection("SiteSettings")
 );
 
 var app = builder.Build();
